@@ -7,11 +7,13 @@ namespace lecture_08
     {
         static void Main(string[] args)
         {
-            
+            string firstString = "AAA.";
+            StrBild(firstString);
         }
-        static void StrBild()
+        static void StrBild(string firstString)
         {
-            string str2 = "AAA.";
+            string str2;
+            str2 = firstString;
             StringBuilder sb = new StringBuilder();
             sb.Append(str2).Append(str2).Append(str2).Append(str2).Append(str2);
             Console.WriteLine(sb);
