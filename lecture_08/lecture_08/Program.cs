@@ -7,6 +7,10 @@ namespace lecture_08
     {
         static void Main(string[] args)
         {
+            
+        }
+        static void StrBild()
+        {
             string str2 = "AAA.";
             StringBuilder sb = new StringBuilder();
             sb.Append(str2).Append(str2).Append(str2).Append(str2).Append(str2);
