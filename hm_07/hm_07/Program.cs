@@ -21,28 +21,42 @@ namespace hm_07
                 " зря повесили эти картины в фойе. Очень хорошо, что они висят тут.\n";
 
             Task1();
-            //Task2(lineFirst);
+            Task2(lineFirst);
         }
 
         static void Task1()
         {
-            Console.WriteLine("Введи стих в одну строку разделяя строки точкой с запятой");
+            Console.WriteLine("Хочешь получить подарок от дедушки Мороза? " +
+                "Тогда введи стишок (на русском языке)\nв одну строку, разделяя строки точкой с запятой");
             string poem;
             poem = Console.ReadLine();
 
             char[] arrayCopy = poem.ToCharArray(); //массив символов
             
-            for (int i =0; i < arrayCopy.Length; i++)
+            for (int i =0; i < arrayCopy.Length; i++) //заменяем О на А
             {
-                if (arrayCopy[i] == 'O')
+                if (arrayCopy[i] == 'О')
                 {
-                    arrayCopy[i] = 'A';
+                    arrayCopy[i] = 'А';
+                }
+
+                if (arrayCopy[i] == 'о')
+                {
+                    arrayCopy[i] = 'а';
                 }
             }
 
-            poem = poem.Replace(";", "\n");
-            Console.WriteLine();
-            Console.Write($"Результата: {poem}");
+            for (int i = 0; i < arrayCopy.Length; i++) //разбиваем на столбики
+            {
+                if (arrayCopy[i] != ';')
+                {
+                    Console.Write(arrayCopy[i]);
+                }
+                else
+                {
+                    Console.WriteLine();
+                }
+            }
         }
         static void Task2(string lineFirst)
         {
@@ -60,13 +74,13 @@ namespace hm_07
 
             for (int i = 0; i < str.Length; i++)
             {
-                if (str[i].Length > maxlen)
+                if (str[i].Length > maxlen) //ищем самое длинное слово
                 {
                     maxlen = str[i].Length;
                     indexMax = i;
                 }
 
-                if (str[i].Length < minlen)
+                if (str[i].Length < minlen) //ищем самое короткое слово
                 {
                     minlen = str[i].Length;
                     indexMin = i;
@@ -75,6 +89,7 @@ namespace hm_07
 
             string longWord = str[indexMax]; // самое длинное слово
             string shortWord = str[indexMin]; //самое короткое слово
+
             lineSecond = lineSecond.Replace(longWord, string.Empty); // удаляем самое длинное слово
             lineSecond = lineSecond.Replace(longWord, shortWord); //меняем слова местами
             lineSecond = lineSecond.Replace(shortWord, longWord);
@@ -83,7 +98,7 @@ namespace hm_07
             int countTotal = 0;
             int countSign = 0;
 
-            for (int i = 0; i < lineSecond.Length; i++)
+            for (int i = 0; i < lineSecond.Length; i++) //считаем символы и знаки
             {
                 countTotal++;
 
@@ -107,13 +122,15 @@ namespace hm_07
 
             lineSecond = lineSecond.Replace("   "," ");
             lineSecond = lineSecond.Replace("  ", " ");
+
             string[] arrayStr = lineSecond.Split(' ', ',', '.', '-');
+
             foreach (var item in arrayStr)
             {
                 Console.Write(" " + item);
             }
             
-            IEnumerable<string> query = from word in arrayStr
+            IEnumerable<string> query = from word in arrayStr //сортируем массив
                                         orderby word.Length
                                         select word;
 
