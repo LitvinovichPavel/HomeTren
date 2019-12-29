@@ -20,8 +20,8 @@ namespace hm_07
                 " теперь я очень заинтересован. Я думаю о художниках, которые их нарисовали. Видимо, не" +
                 " зря повесили эти картины в фойе. Очень хорошо, что они висят тут.\n";
 
-            //Task1();
-            Task2(lineFirst);
+            Task1();
+            //Task2(lineFirst);
         }
 
         static void Task1()
@@ -30,16 +30,19 @@ namespace hm_07
             string poem;
             poem = Console.ReadLine();
 
-
-            //char[] array1 = poem.ToCharArray();
-            string[] array1 = new string[poem.Length]; //массив строк
             char[] arrayCopy = poem.ToCharArray(); //массив символов
-            string strArray1 = poem; //строка
-
-            for (int i =0; i < poem.Length; i++)
+            
+            for (int i =0; i < arrayCopy.Length; i++)
             {
-                
+                if (arrayCopy[i] == 'O')
+                {
+                    arrayCopy[i] = 'A';
+                }
             }
+
+            poem = poem.Replace(";", "\n");
+            Console.WriteLine();
+            Console.Write($"Результата: {poem}");
         }
         static void Task2(string lineFirst)
         {
@@ -102,13 +105,20 @@ namespace hm_07
             Console.WriteLine($"Количество букв: {countTotal - countGeneral}");
             Console.WriteLine($"Количество пунктуационных знаков: {countSign}");
 
-            string[] arrayStr = lineSecond.Split(' ');
+            lineSecond = lineSecond.Replace("   "," ");
+            lineSecond = lineSecond.Replace("  ", " ");
+            string[] arrayStr = lineSecond.Split(' ', ',', '.', '-');
             foreach (var item in arrayStr)
             {
                 Console.Write(" " + item);
             }
             
+            IEnumerable<string> query = from word in arrayStr
+                                        orderby word.Length
+                                        select word;
 
+            foreach (string item in query)
+                Console.WriteLine(item);
         }
     }
 }
