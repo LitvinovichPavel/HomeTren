@@ -6,16 +6,16 @@ namespace AssemblyOneTREN
 {
     class EmployeeTREN
     {
-        private const byte hoursWeek = 40;         //кол-во рабочих часов в неделе
-        public byte day = 22;                     //кол-во рабочих дней в неделе
-        private byte salaryHours = 1;              //оплата часа труда
-        public byte age;                           //возраст сотрудника
-        public string education;                   //образование
-        private int salaryBase;                    //базовый оклад
+        private const byte hoursWeek = 40;          //кол-во рабочих часов в неделе
+        public byte day = 22;                       //кол-во рабочих дней в неделе
+        private byte salaryHours = 1;               //оплата часа труда
+        public byte age;                            //возраст сотрудника
+        public string education;                    //образование
+        private int salaryBase;                     //базовый оклад
         private byte product;                       //кол-во произведенной продукции сотрудником за день
-        private int productPrice;                  //цена за единицу продукта
+        private int productPrice;                   //цена за единицу продукта
         private double salary;                      //зароботная плата
-        private const double percent = 0.01;       //процент от продаж
+        private const double percent = 0.01;        //процент от продаж
         public EmployeeTREN()
         {
             age = 30;
