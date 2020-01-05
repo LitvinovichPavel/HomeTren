@@ -16,7 +16,7 @@ namespace AssemblyOneTREN
         private int productPrice;                  //цена за единицу продукта
         private double salary;                      //зароботная плата
         private const double percent = 0.01;       //процент от продаж
-        private EmployeeTREN()
+        public EmployeeTREN()
         {
             age = 30;
             education = "higher education";
@@ -27,7 +27,7 @@ namespace AssemblyOneTREN
         public void Money()
         {
             salary = salaryBase + (hoursWeek * day * salaryHours) + (product * productPrice * percent * day);
-            Console.WriteLine(salary);
+            Console.WriteLine($"Зарплата: {salary}$");
         }
     }
 }
