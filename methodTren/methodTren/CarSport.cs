@@ -11,9 +11,6 @@ namespace methodTren
         public string mark;
         public string model;
         public double volume;
-        public CarSport()
-        {
-        }
         public CarSport(string strMark, string strModel, int intMax, int intMass, double doVolume)
         {
             mark = strMark;
