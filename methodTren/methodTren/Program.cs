@@ -7,6 +7,7 @@ namespace methodTren
         static void Main(string[] args)
         {
             Console.WriteLine("Sport");
+
             CarSport lexus = new CarSport("Lexus", "RC F", 270, 2250, 5.0);
             lexus.Info();
 
@@ -17,6 +18,7 @@ namespace methodTren
             ferrari.Info();
 
             Console.WriteLine("PASSENGER");
+
             CarPassenger mercedes = new CarPassenger("Mercedes", "S600", 250, 2740, 6.0);
             mercedes.Info();
 
@@ -27,6 +29,7 @@ namespace methodTren
             rr.Info();
 
             Console.WriteLine("SUV");
+
             CarSUV toyota = new CarSUV("Toyota", "Sequoia", 170, 4536, 5.7);
             toyota.Info();
 
