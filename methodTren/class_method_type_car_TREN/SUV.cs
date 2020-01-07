@@ -11,7 +11,6 @@ namespace class_method_type_car_TREN
         private double volume;
         private int maxSpeed;
         private int mass;
-
         public void ToyotaSequoia()
         {
             mark = "Toyota";
