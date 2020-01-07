@@ -6,20 +6,12 @@ namespace class_method_type_car_TREN
 {
     class SUV
     {
-        public string mark;
-        public string model;
-        public double volume;
-        public int maxSpeed;
-        public int mass;
+        private string mark;
+        private string model;
+        private double volume;
+        private int maxSpeed;
+        private int mass;
 
-        public SUV()
-        {
-            this.mark = mark;
-            this.model = model;
-            this.volume = volume;
-            this.maxSpeed = maxSpeed;
-            this.mass = mass;
-        }
         public void ToyotaSequoia()
         {
             mark = "Toyota";
