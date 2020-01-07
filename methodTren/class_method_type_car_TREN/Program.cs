@@ -14,6 +14,9 @@ namespace class_method_type_car_TREN
 
             SUV chevroletTahoe = new SUV();
             chevroletTahoe.ChevroletTahoe();
+
+            Sport ferrari = new Sport();
+            ferrari.FerrariF12();
         }
     }
 }
