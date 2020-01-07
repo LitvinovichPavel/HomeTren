@@ -29,5 +29,23 @@ namespace class_method_type_car_TREN
             mass = 3300;
             Console.WriteLine($"{mark} {model} {volume} liters, max speed {maxSpeed} km/h, mass {mass} kg");
         }
+        public void CadillacEscalade()
+        {
+            mark = "Caddilac";
+            model = "Escalade";
+            volume = 6.2;
+            maxSpeed = 170;
+            mass = 3200;
+            Console.WriteLine($"{mark} {model} {volume} liters, max speed {maxSpeed} km/h, mass {mass} kg");
+        }
+        public void ChevroletTahoe()
+        {
+            mark = "Chevrolet";
+            model = "Tahoe";
+            volume = 6.2;
+            maxSpeed = 170;
+            mass = 3200;
+            Console.WriteLine($"{mark} {model} {volume} liters, max speed {maxSpeed} km/h, mass {mass} kg");
+        }
     }
 }

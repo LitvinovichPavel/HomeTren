@@ -8,6 +8,12 @@ namespace class_method_type_car_TREN
         {
             SUV toyotaSequoia = new SUV();
             toyotaSequoia.ToyotaSequoia();
+
+            SUV caddilacEscalade = new SUV();
+            caddilacEscalade.CadillacEscalade();
+
+            SUV chevroletTahoe = new SUV();
+            chevroletTahoe.ChevroletTahoe();
         }
     }
 }
