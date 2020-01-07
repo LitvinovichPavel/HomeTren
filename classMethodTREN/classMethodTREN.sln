@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classMethodTREN", "classMethodTREN\classMethodTREN.csproj", "{095239B0-901E-420F-9DD4-7B8E1E4B373D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{095239B0-901E-420F-9DD4-7B8E1E4B373D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095239B0-901E-420F-9DD4-7B8E1E4B373D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095239B0-901E-420F-9DD4-7B8E1E4B373D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095239B0-901E-420F-9DD4-7B8E1E4B373D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {529D860D-A737-4A4F-9271-97A630422D6B}
+	EndGlobalSection
+EndGlobal
