@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "methodTren", "methodTren\methodTren.csproj", "{4BD3A24F-009F-45B8-9DDE-21A943F00641}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "methodTren", "methodTren\methodTren.csproj", "{4BD3A24F-009F-45B8-9DDE-21A943F00641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "class_method_type_car_TREN", "class_method_type_car_TREN\class_method_type_car_TREN.csproj", "{1298990C-6513-4275-BA6A-F7C1CA95C6BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4BD3A24F-009F-45B8-9DDE-21A943F00641}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BD3A24F-009F-45B8-9DDE-21A943F00641}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BD3A24F-009F-45B8-9DDE-21A943F00641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1298990C-6513-4275-BA6A-F7C1CA95C6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1298990C-6513-4275-BA6A-F7C1CA95C6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1298990C-6513-4275-BA6A-F7C1CA95C6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1298990C-6513-4275-BA6A-F7C1CA95C6BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
