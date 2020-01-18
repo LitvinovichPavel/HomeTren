@@ -9,8 +9,8 @@ namespace hm_09
             CheckIn checkIn = new CheckIn();
             //checkIn.Greeting();
             //checkIn.FullName();
-            //checkIn.GoToRegistration();
-            checkIn.Pasport();
+            //checkIn.Passport();
+            checkIn.Luggage();
         }
     }
 }

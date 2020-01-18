@@ -4,7 +4,7 @@ using System.Text;
 
 namespace hm_09
 {
-    class PosportControl
+    class PassportControl
     {
     }
 }
