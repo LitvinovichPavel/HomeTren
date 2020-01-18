@@ -7,9 +7,10 @@ namespace hm_09
         static void Main(string[] args)
         {
             CheckIn checkIn = new CheckIn();
-            checkIn.Greeting();
-            checkIn.FullName();
-            checkIn.GoToRegistration();
+            //checkIn.Greeting();
+            //checkIn.FullName();
+            //checkIn.GoToRegistration();
+            checkIn.Pasport();
         }
     }
 }

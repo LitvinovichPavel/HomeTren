@@ -32,7 +32,7 @@ namespace hm_09
                 timeOfDay = "Доброй ночи! ";
             }
 
-            Console.WriteLine($"{timeOfDay}Вас приветствует аэропорт зоны 51!");
+            Console.WriteLine($"{timeOfDay}Вас приветствует аэропорт имени Маши и Медведя!");
         }
         public void FullName() //здесь вводим ФИО
         {
@@ -44,6 +44,18 @@ namespace hm_09
 
             Console.Write("Назовите Ваше отчество: ");
             patronymic = Console.ReadLine();
+        }
+        public void Pasport()
+        {
+            Console.WriteLine("Укажите серию и номе Вашего паспорта: ");
+            
+            string pasportSeries;
+            byte indexSeries = 0;
+            while (indexSeries < 2)
+            {
+                pasportSeries = Console.ReadLine();
+                indexSeries++;
+            }
         }
         public void GoToRegistration()
         {
