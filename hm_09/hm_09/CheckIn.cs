@@ -81,8 +81,7 @@ namespace hm_09
         }
         public void GoToSecurity()
         {
-            Passanger passanger = new Passanger();
-            Console.WriteLine($"{passanger.Name} {passanger.Patronymic}, проходите далее на досмотр!");
+            Console.WriteLine($"Проходите далее на досмотр!");
         }
     }
 }

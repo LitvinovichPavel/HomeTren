@@ -8,9 +8,9 @@ namespace hm_09
         {
             Passanger fullName = new Passanger();
             fullName.FullName();
-
-            CheckIn checkIn = new CheckIn();
-            checkIn.GoToSecurity();
+            string peopleName;
+            peopleName = fullName.Surname;
+            Console.WriteLine("фамилия: " + peopleName);
         }
     }
 }

@@ -8,15 +8,19 @@ namespace hm_09
     {
         private string _surname;                                 // фамилия пассажира
         private string _name;                                    // имя пассажира
-        public string _patronymic;                              // отчество пассажира
+        private string _patronymic;                              // отчество пассажира
         public void FullName()
         {
-            Console.Write("Введите Вашу фамилию: ");
+            Console.Write("Введите Вашу фамилию: \n");
             string nameSurname;
-            nameSurname = Console.ReadLine();
+            nameSurname = "Litvonovich";
+
             Passanger surname = new Passanger();
             surname.Surname = nameSurname;
 
+            string peopleName = surname.Surname;
+            Console.WriteLine("FAMILIA: " + surname.Surname);
+            /*
             Console.Write("Введите Ваше имя: ");
             string nameName;
             nameName = Console.ReadLine();
@@ -27,7 +31,7 @@ namespace hm_09
             string namePatronymic;
             namePatronymic = Console.ReadLine();
             Passanger patronymic = new Passanger();
-            patronymic.Patronymic = namePatronymic;
+            patronymic.Patronymic = namePatronymic;*/
         }
         public string Surname
         {
