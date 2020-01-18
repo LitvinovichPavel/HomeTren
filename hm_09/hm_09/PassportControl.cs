@@ -4,7 +4,8 @@ using System.Text;
 
 namespace hm_09
 {
-    class PassportControl
+    class PassportControl : Passanger
     {
+
     }
 }

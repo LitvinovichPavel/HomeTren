@@ -8,17 +8,59 @@ namespace hm_09
     {
         private string _surname;                                 // фамилия пассажира
         private string _name;                                    // имя пассажира
-        private string _patronymic;                              // отчество пассажира
-        public void FullName() //здесь вводим ФИО
+        public string _patronymic;                              // отчество пассажира
+        public void FullName()
         {
-            Console.Write("Назовите Вашу фамилию: ");
-            _surname = Console.ReadLine();
+            Console.Write("Введите Вашу фамилию: ");
+            string nameSurname;
+            nameSurname = Console.ReadLine();
+            Passanger surname = new Passanger();
+            surname.Surname = nameSurname;
 
-            Console.Write("Назовите Ваше имя: ");
-            _name = Console.ReadLine();
+            Console.Write("Введите Ваше имя: ");
+            string nameName;
+            nameName = Console.ReadLine();
+            Passanger name = new Passanger();
+            name.Name = nameName;
 
-            Console.Write("Назовите Ваше отчество: ");
-            _patronymic = Console.ReadLine();
+            Console.Write("Введите Ваше отчество: ");
+            string namePatronymic;
+            namePatronymic = Console.ReadLine();
+            Passanger patronymic = new Passanger();
+            patronymic.Patronymic = namePatronymic;
+        }
+        public string Surname
+        {
+            get
+            {
+                return _surname;
+            }
+            set
+            {
+                _surname = value;
+            }
+        }
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+        public string Patronymic
+        {
+            get
+            {
+                return _patronymic;
+            }
+            set
+            {
+                _patronymic = value;
+            }
         }
     }
 }

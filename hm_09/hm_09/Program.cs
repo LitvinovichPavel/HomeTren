@@ -6,9 +6,11 @@ namespace hm_09
     {
         static void Main(string[] args)
         {
+            Passanger fullName = new Passanger();
+            fullName.FullName();
+
             CheckIn checkIn = new CheckIn();
-            checkIn.LuggageSuitCase();
-            checkIn.LuggageHand();
+            checkIn.GoToSecurity();
         }
     }
 }

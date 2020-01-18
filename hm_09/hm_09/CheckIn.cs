@@ -10,13 +10,6 @@ namespace hm_09
         private const byte _massLimitHandLuggage = 8;            // лимит массы ручной клади в кг.
         private const byte _priceExscessWeidhtLuggage = 10;      // доплата за перевес каждого кг. багажа
         private const byte _priceExscessWeidhtHand = 12;         // доплата за перевес кучной клади
-        public void Passport() //паспортные данные
-        {
-            Console.Write("Укажите серию и номер Вашего паспорта: ");
-            
-            string passportSeries;
-            passportSeries = Console.ReadLine();
-        }
         public void LuggageSuitCase() // проверяем багаж
         {
             Console.Write("У Вас есть багаж? (да/нет): ");
@@ -88,7 +81,8 @@ namespace hm_09
         }
         public void GoToSecurity()
         {
-            Console.WriteLine("Проходите далее на досмотр!");
+            Passanger passanger = new Passanger();
+            Console.WriteLine($"{passanger.Name} {passanger.Patronymic}, проходите далее на досмотр!");
         }
     }
 }
