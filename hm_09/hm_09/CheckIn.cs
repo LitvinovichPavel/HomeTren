@@ -10,31 +10,6 @@ namespace hm_09
         private const byte _massLimitHandLuggage = 8;            // лимит массы ручной клади в кг.
         private const byte _priceExscessWeidhtLuggage = 10;      // доплата за перевес каждого кг. багажа
         private const byte _priceExscessWeidhtHand = 12;         // доплата за перевес кучной клади
-        public void Greeting() // приветствие
-        {
-            byte realTime;
-            realTime = Convert.ToByte(DateTime.Now.Hour); // приветствуем исходя из реального времени
-            string timeOfDay;
-
-            if (realTime >= 6 && realTime < 12 )
-            {
-                timeOfDay = "Доброе утро! ";
-            }
-            else if (realTime >= 12 && realTime < 18)
-            {
-                timeOfDay = "Добрый день! ";
-            }
-            else if (realTime >= 18 && realTime < 21)
-            {
-                timeOfDay = "Добрый вечер! ";
-            }
-            else
-            {
-                timeOfDay = "Доброй ночи! ";
-            }
-
-            Console.WriteLine($"{timeOfDay}Вас приветствует аэропорт имени Маши и Медведя!");
-        }
         public void Passport() //паспортные данные
         {
             Console.Write("Укажите серию и номер Вашего паспорта: ");
