@@ -6,13 +6,10 @@ namespace hm_09
 {
     class CheckIn
     {
-        private const byte massLimitLuggage = 23;               // лимит массы багажа в кг.
-        private const byte massLimitHandLuggage = 8;            // лимит массы ручной клади в кг.
-        private const byte priceExscessWeidhtLuggage = 10;      // доплата за перевес каждого кг. багажа
-        private const byte priceExscessWeidhtHand = 12;         // доплата за перевес кучной клади
-        private string surname;                                 // фамилия пассажира
-        private string name;                                    // имя пассажира
-        private string patronymic;                              // отчество пассажира
+        private const byte _massLimitLuggage = 23;               // лимит массы багажа в кг.
+        private const byte _massLimitHandLuggage = 8;            // лимит массы ручной клади в кг.
+        private const byte _priceExscessWeidhtLuggage = 10;      // доплата за перевес каждого кг. багажа
+        private const byte _priceExscessWeidhtHand = 12;         // доплата за перевес кучной клади
         public void Greeting() // приветствие
         {
             byte realTime;
@@ -38,17 +35,6 @@ namespace hm_09
 
             Console.WriteLine($"{timeOfDay}Вас приветствует аэропорт имени Маши и Медведя!");
         }
-        public void FullName() //здесь вводим ФИО
-        {
-            Console.Write("Назовите Вашу фамилию: ");            
-            surname = Console.ReadLine();
-
-            Console.Write("Назовите Ваше имя: ");            
-            name = Console.ReadLine();
-
-            Console.Write("Назовите Ваше отчество: ");
-            patronymic = Console.ReadLine();
-        }
         public void Passport() //паспортные данные
         {
             Console.Write("Укажите серию и номер Вашего паспорта: ");
@@ -71,15 +57,15 @@ namespace hm_09
                 massLuggage = (byte)new Random().Next(1, 50); // делаем вес багажа рандомным
                 Console.WriteLine($"Масса Вашего багажа составляет {massLuggage} кг");
                                                               // создаем ситуацию, когда необходимо доплачивать за перевес багажа
-                if (massLuggage > massLimitLuggage)    // т.к. есть лимиты по бесплатному провозу багажа,
+                if (massLuggage > _massLimitLuggage)    // т.к. есть лимиты по бесплатному провозу багажа,
                                                        // расчитываем доплату за перевес
                 {
                     byte massBigger;
-                    massBigger = (byte)(massLuggage - massLimitLuggage);
+                    massBigger = (byte)(massLuggage - _massLimitLuggage);
                     uint money;
-                    money = (uint)(priceExscessWeidhtLuggage * massBigger);
+                    money = (uint)(_priceExscessWeidhtLuggage * massBigger);
                     Console.WriteLine($"Превышение составляет {massBigger}кг.\nНеобходимо доплатать {money}$ " +
-                                      $"({priceExscessWeidhtLuggage}$ за каждый кг.)");
+                                      $"({_priceExscessWeidhtLuggage}$ за каждый кг.)");
                 }
                 else
                 {

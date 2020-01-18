@@ -7,9 +7,14 @@ namespace hm_09
         static void Main(string[] args)
         {
             CheckIn checkIn = new CheckIn();
+
             //checkIn.Greeting();
-            //checkIn.FullName();
+
+            Passanger passanger = new Passanger();
+            passanger.FullName();
+
             //checkIn.Passport();
+
             checkIn.Luggage();
         }
     }
