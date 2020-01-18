@@ -17,7 +17,7 @@ namespace hm_09
             string passportSeries;
             passportSeries = Console.ReadLine();
         }
-        public void Luggage() // проверяем багаж
+        public void LuggageSuitCase() // проверяем багаж
         {
             Console.Write("У Вас есть багаж? (да/нет): ");
             string questionLuggage;
@@ -37,9 +37,9 @@ namespace hm_09
                 {
                     byte massBigger;
                     massBigger = (byte)(massLuggage - _massLimitLuggage);
-                    uint money;
-                    money = (uint)(_priceExscessWeidhtLuggage * massBigger);
-                    Console.WriteLine($"Превышение составляет {massBigger}кг.\nНеобходимо доплатать {money}$ " +
+                    uint moneyLuggage;
+                    moneyLuggage = (uint)(_priceExscessWeidhtLuggage * massBigger);
+                    Console.WriteLine($"Превышение составляет {massBigger}кг.\nНеобходимо доплатать {moneyLuggage}$ " +
                                       $"({_priceExscessWeidhtLuggage}$ за каждый кг.)");
                 }
                 else
@@ -51,22 +51,44 @@ namespace hm_09
             {
                 Console.WriteLine("Ясно, багаж отсутствует!");
             }
-
-            Console.WriteLine("У Вас есть ручная кладь?");
+        }
+        public void LuggageHand()     // проверяем ручную кладь
+        {
+            Console.Write("У Вас есть ручная кладь (да/нет)?: ");
             string questionHandLuggage;
             questionHandLuggage = Console.ReadLine();
 
-            if (questionLuggage == "да" || questionLuggage == "ДА" || // на случай если не будет переключена
-                questionLuggage == "lf" || questionLuggage == "LF")   // клавиатура на русский язык
+            if (questionHandLuggage == "да" || questionHandLuggage == "ДА" || // на случай если не будет переключена
+                questionHandLuggage == "lf" || questionHandLuggage == "LF")   // клавиатура на русский язык
             {
                 Console.WriteLine("Положите свою ручную кладь на весы.");
 
                 byte massHandLuggage;
                 massHandLuggage = (byte)new Random().Next(1, 20);
                 Console.WriteLine($"Масса ручной клади составляет {massHandLuggage}");
-            }
 
-            Console.WriteLine("Спасибо! Проходите далее на досмотр");
+                if (massHandLuggage > _massLimitHandLuggage)
+                {
+                    byte massBiggerHand;
+                    massBiggerHand = (byte)(massHandLuggage - _massLimitHandLuggage);
+                    uint moneyHand;
+                    moneyHand = (uint)(_priceExscessWeidhtHand * massBiggerHand);
+                    Console.WriteLine($"Превышение составляет {massBiggerHand}кг.\nНеобходимо доплатать {moneyHand}$ " +
+                                      $"({_priceExscessWeidhtHand}$ за каждый кг.)");
+                }
+                else
+                {
+                    Console.WriteLine("Превышения массы ручной клади нет! Доплачивать не придется!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Понятно! Ручная кладь отсутствует!");
+            }
+        }
+        public void GoToSecurity()
+        {
+            Console.WriteLine("Проходите далее на досмотр!");
         }
     }
 }
