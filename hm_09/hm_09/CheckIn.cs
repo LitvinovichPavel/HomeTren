@@ -6,11 +6,13 @@ namespace hm_09
 {
     class CheckIn
     {
-        private const byte massLimit = 23;          // лимит массы багажа в кг.
-        private const byte priceExscessWeidht = 10; // доплата за перевес каждого кг. багажа
-        private string surname;                     // фамилия пассажира
-        private string name;                        // имя пассажира
-        private string patronymic;                  // отчество пассажира
+        private const byte massLimitLuggage = 23;               // лимит массы багажа в кг.
+        private const byte massLimitHandLuggage = 8;            // лимит массы ручной клади в кг.
+        private const byte priceExscessWeidhtLuggage = 10;      // доплата за перевес каждого кг. багажа
+        private const byte priceExscessWeidhtHand = 12;         // доплата за перевес кучной клади
+        private string surname;                                 // фамилия пассажира
+        private string name;                                    // имя пассажира
+        private string patronymic;                              // отчество пассажира
         public void Greeting() // приветствие
         {
             byte realTime;
@@ -59,29 +61,51 @@ namespace hm_09
             Console.Write("У Вас есть багаж? (да/нет): ");
             string questionLuggage;
             questionLuggage = Console.ReadLine();
-            if (questionLuggage == "да" || questionLuggage == "lf")
+
+            if (questionLuggage == "да" || questionLuggage == "ДА" || // на случай если не будет переключена
+                questionLuggage == "lf" || questionLuggage == "LF")   // клавиатура на русский язык
             {
                 Console.WriteLine("Положите свой багаж на ленту.");
 
                 byte massLuggage;
                 massLuggage = (byte)new Random().Next(1, 50); // делаем вес багажа рандомным
                 Console.WriteLine($"Масса Вашего багажа составляет {massLuggage} кг");
-
-                if (massLuggage > massLimit) // т.к. есть лимиты по бесплатному провозу багажа,
-                                             // расчитываем доплату за перевес
+                                                              // создаем ситуацию, когда необходимо доплачивать за перевес багажа
+                if (massLuggage > massLimitLuggage)    // т.к. есть лимиты по бесплатному провозу багажа,
+                                                       // расчитываем доплату за перевес
                 {
                     byte massBigger;
-                    massBigger = (byte)(massLuggage - massLimit);
+                    massBigger = (byte)(massLuggage - massLimitLuggage);
                     uint money;
-                    money = (uint)(priceExscessWeidht * massBigger);
+                    money = (uint)(priceExscessWeidhtLuggage * massBigger);
                     Console.WriteLine($"Превышение составляет {massBigger}кг.\nНеобходимо доплатать {money}$ " +
-                                      $"({priceExscessWeidht}$ за каждый кг.)");
+                                      $"({priceExscessWeidhtLuggage}$ за каждый кг.)");
+                }
+                else
+                {
+                    Console.WriteLine("Превышения массы багажа нет! Доплачивать не придется!");
                 }
             }
             else
             {
                 Console.WriteLine("Ясно, багаж отсутствует!");
             }
+
+            Console.WriteLine("У Вас есть ручная кладь?");
+            string questionHandLuggage;
+            questionHandLuggage = Console.ReadLine();
+
+            if (questionLuggage == "да" || questionLuggage == "ДА" || // на случай если не будет переключена
+                questionLuggage == "lf" || questionLuggage == "LF")   // клавиатура на русский язык
+            {
+                Console.WriteLine("Положите свою ручную кладь на весы.");
+
+                byte massHandLuggage;
+                massHandLuggage = (byte)new Random().Next(1, 20);
+                Console.WriteLine($"Масса ручной клади составляет {massHandLuggage}");
+            }
+
+            Console.WriteLine("Спасибо! Проходите далее на досмотр");
         }
     }
 }
