@@ -18,6 +18,20 @@ namespace Troelsen_encapsulation_01
             empID = id;
             cuppPay = pay;
         }
+        
+        
+        
+        public string GetName()
+        {
+            return empName;
+        }
+        public void SetName(string name)
+        {
+            empName = name;
+        }
+        
+        
+        
         public void GiveBonus(float amount)
         {
             cuppPay += amount;
