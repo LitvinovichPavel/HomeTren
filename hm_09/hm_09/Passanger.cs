@@ -14,13 +14,11 @@ namespace hm_09
         {
             Console.Write("Введите Вашу фамилию: \n");
             string nameSurname;
-            nameSurname = "Litvonovich";
-
+            nameSurname = Console.ReadLine();
             Passanger surname = new Passanger();
             surname.Surname = nameSurname;
 
-            Console.WriteLine("FAMILIA: " + surname.Surname);
-            /*
+            
             Console.Write("Введите Ваше имя: ");
             string nameName;
             nameName = Console.ReadLine();
@@ -31,7 +29,7 @@ namespace hm_09
             string namePatronymic;
             namePatronymic = Console.ReadLine();
             Passanger patronymic = new Passanger();
-            patronymic.Patronymic = namePatronymic;*/
+            patronymic.Patronymic = namePatronymic;
         }
         public string Surname
         {

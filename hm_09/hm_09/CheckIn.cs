@@ -14,6 +14,11 @@ namespace hm_09
         {
 
         }
+        public void Ticket()
+        {
+            Console.WriteLine(" Покажите Ваш паспорт и посадочный талон");
+            Console.WriteLine(" Спасибо! Вот ваш билет и паспорт.\n Ваше место A12");
+        }
         public void LuggageSuitCase() // проверяем багаж
         {
             Console.Write("У Вас есть багаж? (да/нет): ");
