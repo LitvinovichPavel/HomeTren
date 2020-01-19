@@ -9,6 +9,7 @@ namespace hm_09
         private string _surname;                                 // фамилия пассажира
         private string _name;                                    // имя пассажира
         private string _patronymic;                              // отчество пассажира
+
         public void FullName()
         {
             Console.Write("Введите Вашу фамилию: \n");
@@ -18,7 +19,6 @@ namespace hm_09
             Passanger surname = new Passanger();
             surname.Surname = nameSurname;
 
-            string peopleName = surname.Surname;
             Console.WriteLine("FAMILIA: " + surname.Surname);
             /*
             Console.Write("Введите Ваше имя: ");

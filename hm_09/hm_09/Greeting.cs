@@ -6,6 +6,7 @@ namespace hm_09
 {
     class Greeting
     {
+        private const string _nameAirport = "аэропорт имени Маши и Медведя"; // название аэропорта 
         public void Hello() // приветствие
         {
             byte realTime;
@@ -29,7 +30,7 @@ namespace hm_09
                 timeOfDay = "Доброй ночи! ";
             }
 
-            Console.WriteLine($"{timeOfDay}Вас приветствует аэропорт имени Маши и Медведя!");
+            Console.WriteLine($"{timeOfDay}Вас приветствует {_nameAirport}!");
         }
     }
 }

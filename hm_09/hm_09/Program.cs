@@ -6,11 +6,9 @@ namespace hm_09
     {
         static void Main(string[] args)
         {
-            Passanger fullName = new Passanger();
-            fullName.FullName();
-            string peopleName;
-            peopleName = fullName.Surname;
-            Console.WriteLine("фамилия: " + peopleName);
+            SecurityCheck securityCheck = new SecurityCheck();
+            securityCheck.HelloSecurityCheck();
+            securityCheck.Search();
         }
     }
 }

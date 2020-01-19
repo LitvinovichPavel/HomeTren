@@ -10,14 +10,18 @@ namespace hm_09
         private const byte _massLimitHandLuggage = 8;            // лимит массы ручной клади в кг.
         private const byte _priceExscessWeidhtLuggage = 10;      // доплата за перевес каждого кг. багажа
         private const byte _priceExscessWeidhtHand = 12;         // доплата за перевес кучной клади
+        public void HelloCheckIn()
+        {
+
+        }
         public void LuggageSuitCase() // проверяем багаж
         {
             Console.Write("У Вас есть багаж? (да/нет): ");
             string questionLuggage;
             questionLuggage = Console.ReadLine();
 
-            if (questionLuggage == "да" || questionLuggage == "ДА" || // на случай если не будет переключена
-                questionLuggage == "lf" || questionLuggage == "LF")   // клавиатура на русский язык
+            if (questionLuggage.Equals("да") || questionLuggage.Equals("ДА") || // на случай если не будет переключена
+                questionLuggage.Equals("lf") || questionLuggage.Equals("LF"))   // клавиатура на русский язык
             {
                 Console.WriteLine("Положите свой багаж на ленту.");
 
@@ -51,13 +55,13 @@ namespace hm_09
             string questionHandLuggage;
             questionHandLuggage = Console.ReadLine();
 
-            if (questionHandLuggage == "да" || questionHandLuggage == "ДА" || // на случай если не будет переключена
-                questionHandLuggage == "lf" || questionHandLuggage == "LF")   // клавиатура на русский язык
+            if (questionHandLuggage.Equals("да") || questionHandLuggage.Equals("ДА") || // на случай если не будет переключена
+                questionHandLuggage.Equals("lf") || questionHandLuggage.Equals("LF"))   // клавиатура на русский язык
             {
                 Console.WriteLine("Положите свою ручную кладь на весы.");
 
                 byte massHandLuggage;
-                massHandLuggage = (byte)new Random().Next(1, 20);
+                massHandLuggage = (byte)new Random().Next(1, 25);
                 Console.WriteLine($"Масса ручной клади составляет {massHandLuggage}");
 
                 if (massHandLuggage > _massLimitHandLuggage)
