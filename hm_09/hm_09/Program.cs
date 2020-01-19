@@ -13,6 +13,7 @@ namespace hm_09
             passanger.FullName();                            // вводим данные пассажира
 
             CheckIn checkIn = new CheckIn();
+            checkIn.HelloCheckIn();
             checkIn.Ticket();                                // выдача билета
             checkIn.LuggageSuitCase();                       // взвешивание багажа
             checkIn.LuggageHand();                           // взвешивание ручной клади
