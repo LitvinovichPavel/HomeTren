@@ -6,10 +6,14 @@ namespace Troelsen_encapsulation_01
     {
         static void Main(string[] args)
         {
-            Employee emp = new Employee("YASIA", 317857, 3000);
+            Employee emp = new Employee();
             emp.DisplayStatus();
-            emp.SetName("IIGOR");
-            Console.WriteLine($"NAME: {emp.GetName()}");
+            emp.Name = "VASILIY";
+            Console.WriteLine(emp.Name);
+            //emp.SetName("VASILIY");
+            //Console.WriteLine($"NAME: {emp.GetName()}");
+            Check check = new Check();
+            check.MethodCheck();
         }
     }
 }
