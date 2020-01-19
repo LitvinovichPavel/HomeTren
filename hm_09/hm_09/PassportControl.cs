@@ -9,7 +9,7 @@ namespace hm_09
         private string passportSerNum;
         public void Passport()
         {
-            Console.Write(" Укажите серию и номер Вашего паспорта: ");
+            Console.Write("*****Паспортный контроль*****\n Укажите серию и номер Вашего паспорта: ");
             passportSerNum = Console.ReadLine();
             Console.WriteLine(" Виза есть! Документы в полном порядке! Удачного полета!");
         }

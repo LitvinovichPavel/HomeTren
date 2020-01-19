@@ -12,7 +12,7 @@ namespace hm_09
         private const byte _priceExscessWeidhtHand = 12;         // доплата за перевес кучной клади
         public void HelloCheckIn()
         {
-
+            Console.WriteLine("*****Стойка регистрации*****");
         }
         public void Ticket()
         {
