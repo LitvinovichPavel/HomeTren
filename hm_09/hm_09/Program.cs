@@ -6,9 +6,7 @@ namespace hm_09
     {
         static void Main(string[] args)
         {
-            SecurityCheck securityCheck = new SecurityCheck();
-            securityCheck.HelloSecurityCheck();
-            securityCheck.Search();
+
         }
     }
 }
