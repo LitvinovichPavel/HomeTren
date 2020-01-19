@@ -12,12 +12,11 @@ namespace hm_09
 
         public void FullName()
         {
-            Console.Write("Введите Вашу фамилию: \n");
+            Console.Write("Введите Вашу фамилию: ");
             string nameSurname;
             nameSurname = Console.ReadLine();
             Passanger surname = new Passanger();
             surname.Surname = nameSurname;
-
             
             Console.Write("Введите Ваше имя: ");
             string nameName;
