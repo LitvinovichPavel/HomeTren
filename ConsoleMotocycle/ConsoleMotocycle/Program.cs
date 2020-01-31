@@ -12,12 +12,14 @@ namespace ConsoleMotocycle
         {
             MotocycleService service = new MotocycleService();
             MyConsoleMotocycle motocycle = new MyConsoleMotocycle("Suzuki");
+
             motocycle.StartEngine();
             motocycle.Move(1000);
             motocycle.Move(5000);
             motocycle.StopEngine();
             motocycle = null;
             service = null;
+
             service = new MotocycleService();
             motocycle = new MyConsoleMotocycle("Suzuki");
             motocycle.StartEngine();
@@ -25,9 +27,9 @@ namespace ConsoleMotocycle
             motocycle.StopEngine();
             motocycle = null;
             service = null;
+
             service = new MotocycleService();
             motocycle = new MyConsoleMotocycle("Suzuki");
-            Console.ReadKey();
         }
         static void GoToService(int distanceFromLastService)
         {
