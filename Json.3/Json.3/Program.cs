@@ -42,15 +42,15 @@ namespace Json._3
                 WriteIndented = true
             };
             // сохранение данных
-            //using (FileStream fs = new FileStream("menuMaki.json", FileMode.OpenOrCreate))
-            //{
-            //    await JsonSerializer.SerializeAsync<Menu>(fs, menu, options);
-            //}
+            using (FileStream fs = new FileStream("menuMaki.json", FileMode.OpenOrCreate))
+            {
+                await JsonSerializer.SerializeAsync<Menu>(fs, menu, options);
+            }
 
             // чтение данных
             using (FileStream fs = new FileStream("menuMaki.json", FileMode.OpenOrCreate))
             {
-                Menu restoredMenu = await JsonSerializer.DeserializeAsync<Menu>(fs);
+                Menu restoredMenu = await JsonSerializer.DeserializeAsync<Menu>(fs, options);
                 Console.WriteLine($"MENU: {restoredMenu.Makis[0].Title}");
             }
         }
