@@ -9,67 +9,119 @@ namespace Json._3
     {
         static async Task Main(string[] args)
         {
-            /*
-            Menu menu = new Menu();
-            menu.Makis = new Maki[4];
+            
+            AllMenu menu = new AllMenu();
 
+            menu.Beverages = new Beverage[3];
+            menu.Beverages[0] = new Beverage()
+            {
+                Title = "Fanta",
+                Mass = 0.5,
+                Price = 2.0
+            };
+            menu.Beverages[1] = new Beverage()
+            {
+                Title = "Coca-Cola",
+                Mass = 0.5,
+                Price = 2.0
+            };
+            menu.Beverages[2] = new Beverage()
+            {
+                Title = "Water",
+                Mass = 0.5,
+                Price = 0.5
+            };
+
+            menu.Makis = new Maki[4];
             menu.Makis[0] = new Maki()
             {
-                Title = "Avokado maki",
-                Mass = 110,
-                Price = 5.2
+                Title = "Авокадо маки",
+                Mass = 100,
+                Price = 5.6
             };
             menu.Makis[1] = new Maki()
             {
-                Title = "Arizona maki",
-                Mass = 120,
-                Price = 4.8
+                Title = "Аризона маки",
+                Mass = 100,
+                Price = 6.2
             };
             menu.Makis[2] = new Maki()
             {
-                Title = "Karada maki",
-                Mass = 130,
-                Price = 3.8
+                Title = "Карада маки",
+                Mass = 100,
+                Price = 5.1
             };
             menu.Makis[3] = new Maki()
             {
-                Title = "Nara maki",
-                Mass = 140,
-                Price = 7.2
-            };*/
+                Title = "Нара маки",
+                Mass = 100,
+                Price = 8.7
+            };
+
+            menu.Sets = new Set[4];
+            menu.Sets[0] = new Set()
+            {
+                Title = "Сет №1",
+                Mass = 410,
+                Price = 32.0
+            };
+            menu.Sets[1] = new Set()
+            {
+                Title = "Сет №2",
+                Mass = 430,
+                Price = 35.2
+            };
+            menu.Sets[2] = new Set()
+            {
+                Title = "Сет №3",
+                Mass = 420,
+                Price = 37.1
+            };
+            menu.Sets[3] = new Set()
+            {
+                Title = "Большой сет",
+                Mass = 1000,
+                Price = 55.7
+            };
 
             var options = new JsonSerializerOptions
             {
                 WriteIndented = true
             };
-            /*
             // сохранение данных
             using (FileStream fs = new FileStream("menuMaki.json", FileMode.OpenOrCreate))
             {
-                await JsonSerializer.SerializeAsync<Menu>(fs, menu, options);
-            }*/
-
+                await JsonSerializer.SerializeAsync<AllMenu>(fs, menu, options);
+            }
             // чтение данных
             using (FileStream fs = new FileStream("menuMaki.json", FileMode.OpenOrCreate))
             {
-                Menu restoredMenu = await JsonSerializer.DeserializeAsync<Menu>(fs, options);
-                Console.WriteLine($"MENU: {restoredMenu.Makis[0].Title}, {restoredMenu.Makis[0].Mass}gr, PRICE: {restoredMenu.Makis[0].Price}");
-                Console.WriteLine($"MENU: {restoredMenu.Makis[1].Title}, {restoredMenu.Makis[1].Mass}gr, PRICE: {restoredMenu.Makis[1].Price}");
-                Console.WriteLine($"MENU: {restoredMenu.Makis[2].Title}, {restoredMenu.Makis[2].Mass}gr, PRICE: {restoredMenu.Makis[2].Price}");
-                Console.WriteLine($"MENU: {restoredMenu.Makis[3].Title}, {restoredMenu.Makis[3].Mass}gr, PRICE: {restoredMenu.Makis[3].Price}");
+                AllMenu restoredMenu = await JsonSerializer.DeserializeAsync<AllMenu>(fs, options);
             }
         }
     }
-
-    class Menu
+    class AllMenu
     {
+        public Beverage[] Beverages { get; set; }
         public Maki[] Makis { get; set; }
+        public Set[] Sets { get; set; }
+    }
+    class Beverage
+    {
+        public string Title { get; set; }
+        public double Mass { get; set; }
+        public double Price { get; set; }
     }
     class Maki
     {
-        public string Title { get; set; }//name
-        public double Mass { get; set; }//age
+        public string Title { get; set; }
+        public double Mass { get; set; }
         public double Price { get; set; }
-
+    }
+    class Set
+    {
+        public string Title { get; set; }
+        public double Mass { get; set; }
+        public double Price { get; set; }
     }
 }
