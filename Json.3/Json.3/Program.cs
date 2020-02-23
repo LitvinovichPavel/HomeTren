@@ -89,14 +89,15 @@ namespace Json._3
                 WriteIndented = true
             };
             // сохранение данных
-            using (FileStream fs = new FileStream("menuMaki.json", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("menuJson.json", FileMode.OpenOrCreate))
             {
                 await JsonSerializer.SerializeAsync<AllMenu>(fs, menu, options);
             }
             // чтение данных
-            using (FileStream fs = new FileStream("menuMaki.json", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("menuJson.json", FileMode.OpenOrCreate))
             {
                 AllMenu restoredMenu = await JsonSerializer.DeserializeAsync<AllMenu>(fs, options);
+                Console.WriteLine($"НАПИТКИ: {restoredMenu.Beverages[0].Title}, {restoredMenu.Beverages[0].Mass}, {restoredMenu.Beverages[0].Price}");
             }
         }
     }
