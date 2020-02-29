@@ -18,38 +18,18 @@ namespace JsonMetanit.Write.Read
         public static void MethodBook()
         {
             var allBook = new AllBook();
-            allBook.Books = new Book[3];//в json находится по названием Books
-
-            allBook.Books[0] = new Book()
-            {
-                Author = "Rihter",
-                Title = "CLR via C#",
-                Price = 100
-            };
-            allBook.Books[1] = new Book()
-            {
-                Author = "Albahari",
-                Title = ".NET Core",
-                Price = 110
-            };
-            allBook.Books[2] = new Book()
-            {
-                Author = "Troelsen",
-                Title = "C# 7.0",
-                Price = 120
-            };
-
             DataContractJsonSerializer formatter = new DataContractJsonSerializer(typeof(AllBook));
 
-            using (FileStream fs = new FileStream("C:/D/Projects/111.json", FileMode.OpenOrCreate))
-            {
-                formatter.WriteObject(fs, allBook);
-            }
+            int priceRihter, priceAlbahari, priceTroelsen;
 
             using (FileStream fs = new FileStream("C:/D/Projects/111.json", FileMode.OpenOrCreate))
             {
                 AllBook book2 = (AllBook)formatter.ReadObject(fs);
+                priceRihter = book2.Books[0].Price;
+                priceAlbahari = book2.Books[1].Price;
+                priceTroelsen = book2.Books[2].Price;
             }
+            Console.WriteLine($"PRICE RIHTER: {priceRihter}");
         }
     }
     public class AllBook
