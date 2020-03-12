@@ -29,12 +29,11 @@ namespace Troelsen_autom_property
     }
     class Garage
     {
-        public int NumerOfCars { get; set; }
-        public Car MyAuto { get; set;  }
+        public int NumerOfCars { get; set; } = 1;
+        public Car MyAuto { get; set; } = new Car();
         public Garage()
         {
-            MyAuto = new Car();
-            NumerOfCars = 1;
+
         }
         public Garage(Car car, int number)
         {
