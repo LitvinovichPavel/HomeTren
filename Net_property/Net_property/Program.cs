@@ -12,6 +12,7 @@ namespace Net_property
             person.Age = 30;
 
             Console.WriteLine($"FULL NAME: {person.FullName}");
+            Console.WriteLine(Math.PI);
         }
     }
     class Person
