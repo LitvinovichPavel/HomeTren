@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Net_Inheritance
 {
-    class Triangle : TwoDShape
+    class Triangle : TwoDShape//
     {
         private string Style { get; set; }
         public Triangle()

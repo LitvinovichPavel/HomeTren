@@ -10,7 +10,7 @@ namespace Net_Inheritance
             Triangle triangle2 = new Triangle("прямоугольный", 8, 12);
             Triangle triangle3 = new Triangle(4);
 
-            triangle1 = triangle2;
+            //triangle1 = triangle2;
 
             Console.WriteLine($"OBJECT INFORMATION ONE: ");
             triangle1.ShowStyle();
