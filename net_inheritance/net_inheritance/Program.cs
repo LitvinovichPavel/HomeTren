@@ -7,30 +7,25 @@ namespace Net_Inheritance
         static void Main(string[] args)
         {
             Triangle triangle1 = new Triangle();
-            Triangle triangle2 = new Triangle();
+            Triangle triangle2 = new Triangle("прямоугольный", 8, 12);
+            Triangle triangle3 = new Triangle(4);
 
-            triangle1.Width = 4;
-            triangle1.Height = 4;
-            triangle1.Style = "number one";
+            triangle1 = triangle2;
 
-            triangle2.Width = 8;
-            triangle2.Height = 12;
-            triangle2.Style = "number two";
-
-            Console.WriteLine($"Information triangle number ONE: ");
+            Console.WriteLine($"OBJECT INFORMATION ONE: ");
             triangle1.ShowStyle();
             triangle1.ShowDim();
-            Console.WriteLine($"AREA = {triangle1.Area()}\n");
+            Console.WriteLine($"AREA: {triangle1.Area()}\n");
 
-            Console.WriteLine($"Information triangle number TWO: ");
+            Console.WriteLine($"OBJECT INFORMATION TWO");
             triangle2.ShowStyle();
             triangle2.ShowDim();
-            Console.WriteLine($"AREA = {triangle2.Area()}\n");
+            Console.WriteLine($"AREA: {triangle2.Area()}\n");
 
-            TwoDShape twoDShape = new TwoDShape();
-            twoDShape.Width = 11;
-            twoDShape.Height = 22;
-            twoDShape.ShowDim();
+            Console.WriteLine($"OBJECT INFORMATION THREE");
+            triangle3.ShowStyle();
+            triangle3.ShowDim();
+            Console.WriteLine($"AREA: {triangle3.Area()}\n");
         }
     }
 }

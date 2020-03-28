@@ -8,6 +8,21 @@ namespace Net_Inheritance
     {
         public double Width { get; set; }
         public double Height { get; set; }
+        public TwoDShape()
+        {
+            Width = 0;
+            Height = 0;
+        }
+        public TwoDShape(double w, double h)
+        {
+            Width = w;
+            Height = h;
+        }
+        public TwoDShape(double x)
+        {
+            Width = x;
+            Height = x;
+        }
         public void ShowDim()
         {
             Console.WriteLine($"WIDTH: {Width}, HEIGHT: {Height}");
