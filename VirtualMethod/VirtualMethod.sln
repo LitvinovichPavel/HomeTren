@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualMethod", "VirtualMethod\VirtualMethod.csproj", "{1CE01C7D-4E27-426B-8AF6-2D055F0DA984}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CE01C7D-4E27-426B-8AF6-2D055F0DA984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CE01C7D-4E27-426B-8AF6-2D055F0DA984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CE01C7D-4E27-426B-8AF6-2D055F0DA984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CE01C7D-4E27-426B-8AF6-2D055F0DA984}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA56358C-663C-408B-9ED5-94F221CADF05}
+	EndGlobalSection
+EndGlobal
