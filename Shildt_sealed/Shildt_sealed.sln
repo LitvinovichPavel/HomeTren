@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shildt_sealed", "Shildt_sealed\Shildt_sealed.csproj", "{1600D7FD-FB66-4401-B217-C32D0B67629D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1600D7FD-FB66-4401-B217-C32D0B67629D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1600D7FD-FB66-4401-B217-C32D0B67629D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1600D7FD-FB66-4401-B217-C32D0B67629D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1600D7FD-FB66-4401-B217-C32D0B67629D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDA3192A-58CF-460A-AC6F-4E4B5FC5D476}
+	EndGlobalSection
+EndGlobal
